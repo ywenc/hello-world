@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class Search extends Component {
   constructor (props) {
     super(props);
 
     this.state = { query: '' };
-  }
-
-  onChange () {
-  }
-
-
-  onKeyPress () {
-  }
-
-
-  submit () {
-  }
-
-  clear () {
   }
 
   render () {

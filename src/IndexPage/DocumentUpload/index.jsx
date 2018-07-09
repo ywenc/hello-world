@@ -1,40 +1,21 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class DocumentUpload extends Component {
   constructor (props) {
     super(props);
 
     this.state = {
-      attachment_file_name: '',
-      attachment: false,
-      isUploaded: false,
       isUploading: false,
       isSubmitting: false,
       errors: []
     };
   }
 
-  submit () {
-  }
-
-  onCreate() {
-  }
-
-  onSuccessfulSave() {
-  }
-
-  onFileChange () {
-  }
-
-  handleFileNameInput() {
-  }
-
   render () {
-    const { errors, attachment } = this.state;
+    const { errors } = this.state;
     const submitText = !this.state.isSubmitting ? 'Upload' : 'Uploading...';
     return (
-      <form onSubmit={this.submit}>
+      <form>
         <div>
           {
             errors.map((e, i) => <span key={i} className=''>{e}</span>)

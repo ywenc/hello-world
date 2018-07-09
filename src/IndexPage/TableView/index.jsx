@@ -9,26 +9,6 @@ class UploadedDocumentsTable extends Component {
     };
   }
 
-  componentDidUpdate () {
-  }
-
-  onClickCancel () {
-  }
-
-  onClickFileLink () {
-  }
-
-  tableHeading () {
-    const { tableHeadings } = this.props;
-    return (
-      <thead>
-        <tr>
-          { tableHeadings.map((h, i) => <th key={i}>{h}</th>) }
-        </tr>
-      </thead>
-    );
-  }
-
   tableBody () {
     const { documents, documentToRename, activeTable, attributes } = this.props;
     const { isUpdating } = this.state;

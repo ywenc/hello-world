@@ -51,30 +51,13 @@ class UploadedDocumentsPage extends Component {
     };
   }
 
-  // search
-  submitSearch () {
-  }
-
-  clearSearch () {
-  }
-
-  // show
-  clickFileLink () {
-  }
-  // update
-  startRenaming () {
-  }
-
-  stopRenaming () {
-  }
-
   render () {
     return (
       <div className="width">
         <div className="panel width mb clearfix">
           <div className='fl'>
             <h3>Upload a Document</h3>
-            <DocumentUpload onSuccessfulSave={this.onSuccessfulSave}/>
+            <DocumentUpload />
           </div>
 
           <div className="fr w-70 width">
@@ -88,7 +71,6 @@ class UploadedDocumentsPage extends Component {
                   isSearching={this.state.isSearching}
                   documents={this.state.documents}
                   documentToRename={this.state.documentToRename}
-                  clickFileLink={this.clickFileLink}
                   activeTable={this.state.activeTable === 'recent'}
                 />
             }
@@ -97,7 +79,7 @@ class UploadedDocumentsPage extends Component {
 
         <div className="panel">
           <h4 className="">{'Documents Library'}</h4>
-
+          <UploadedDocumentSearch />
           { this.state.isLoading
               ? <Loading />
               : <UploadedDocumentsTable
@@ -106,10 +88,7 @@ class UploadedDocumentsPage extends Component {
                 tableHeadings={['Document Name', 'Actions']}
                 isSearching={this.state.isSearching}
                 documents={this.state.documents}
-                startRenaming={this.startRenaming}
-                stopRenaming={this.stopRenaming}
                 documentToRename={this.state.documentToRename}
-                clickFileLink={this.clickFileLink}
                 activeTable={this.state.activeTable === 'all'}/>
           }
         </div>
